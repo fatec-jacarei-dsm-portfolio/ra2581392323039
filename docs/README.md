@@ -2,6 +2,8 @@
 
 Este é um portfólio feito com HTML, CSS e JavaScript. Ele mostra meus projetos, informações sobre mim e formas de contato.
 
+👉 [Clique aqui para ver o portfólio online](https://cguilhermec.github.io/portfolio/)
+
 ## Tecnologias usadas
 
 - HTML
