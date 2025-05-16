@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudioSrv</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    /* Adicione isso no head do seu HTML para os ícones */
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="../css/Navbar.css" />
+    <link rel="stylesheet" href="../css/GestaoInteligente.css" />
+
+    <script src="../scripts/Gestao-Inteligente.js" defer></script>
+  </head>
+  <body>
+    <header class="navbar" id="navbar">
+      <div class="logo">Guilherme Carvalho</div>
+      <div class="nav-container">
+        <nav class="nav-links">
+          <a href="../../index.html#home">Início</a>
+          <a href="../../index.html#sobre">Sobre Mim</a>
+          <a href="../../index.html#projetos">Projetos</a>
+          <a href="../../index.html#contato">Contato</a>
+        </nav>
+        <!-- Botão menu (vai ser manipulado via JS) -->
+        <button class="menu-button" aria-label="Abrir menu de navegação">
+          ☰
+        </button>
+      </div>
+    </header>
+
+    <section class="inicio">
+      <h1>StudioSrv</h1>
+      <p>
+        Esta página apresenta o estudo completo do StudioSrv, uma aplicação web
+        para agendamento de estúdios, incluindo visão geral do projeto,
+        tecnologias utilizadas.
+      </p>
+    </section>
+
+    <section class="conteudo">
+      <img src="../images/StudioSrv/StudioSRV.png" alt="" />
+      <h2>Overview</h2>
+      <p>
+        O <strong>StudioSrv</strong> é uma aplicação web desenvolvida para
+        facilitar o agendamento de estúdios por produtores, resolvendo uma
+        dificuldade recorrente enfrentada pelo gestor do espaço: a centralização
+        manual das reservas. Anteriormente, todos os agendamentos eram feitos
+        diretamente com ele, por meio de solicitações informais. O StudioSrv
+        veio como uma solução eficiente, que descentraliza esse processo e
+        oferece aos produtores a possibilidade de visualizar facilmente os dias
+        disponíveis e realizar suas reservas de forma simples e intuitiva.
+      </p>
+      <p>
+        A plataforma garante agendamentos 100% otimizados, evitando conflitos de
+        horários e reduzindo o tempo gasto com gestão manual. Tudo isso com uma
+        interface clean, navegação fluida e um sistema seguro e bem estruturado.
+      </p>
+      <h2>Principais Funcionalidades</h2>
+      <ul>
+        <li>
+          <strong>Visualização de disponibilidade:</strong> Produtores podem
+          acessar um calendário interativo para verificar os dias e horários
+          livres para gravação.
+        </li>
+        <li>
+          <strong>Reserva online:</strong> Agendamentos são realizados
+          diretamente pelo site, sem necessidade de mediação humana.
+        </li>
+        <li>
+          <strong>Integração com Google Agenda:</strong> Sincronização
+          automática dos agendamentos com a conta do Google do estúdio,
+          facilitando a organização do espaço.
+        </li>
+        <li>
+          <strong>Controle de acesso por tipo de usuário:</strong> A aplicação
+          possui diferenciação de permissões. Administradores têm acesso
+          completo para cadastrar estúdios, programas e novos usuários, enquanto
+          usuários comuns visualizam e gerenciam apenas seus próprios
+          agendamentos.
+        </li>
+        <li>
+          <strong>Autenticação segura:</strong> Apenas usuários autorizados
+          podem acessar o sistema, com login protegido por JWT e senhas
+          criptografadas com bcrypt.
+        </li>
+      </ul>
+      <h2>Arquitetura e Tecnologias Utilizadas</h2>
+      <p>
+        O StudioSrv foi desenvolvido com foco em escalabilidade, organização de
+        código e segurança, utilizando a arquitetura
+        <strong>MSC (Model-Service-Controller)</strong> para uma separação clara
+        das responsabilidades.
+      </p>
+      <ul>
+        <li>
+          <strong>Back-end:</strong> Construído com <strong>Node.js</strong> e
+          <strong>TypeScript</strong>, garantindo segurança de tipagem e
+          organização do projeto. Utilizamos <strong>Prisma</strong> como ORM
+          para interação com o <strong>MySQL</strong>, proporcionando consultas
+          otimizadas e modelagem eficiente dos dados. A autenticação é feita com
+          <strong>JWT</strong>, e as senhas dos usuários são protegidas com
+          <strong>bcrypt</strong>.
+        </li>
+        <li>
+          <strong>Integração com Google Calendar:</strong> Utilizamos a
+          <strong>API oficial do Google</strong> para sincronizar as reservas
+          diretamente com a agenda do estúdio, proporcionando uma visão
+          unificada e atualizada dos compromissos.
+        </li>
+        <li>
+          <strong>Front-end:</strong> Desenvolvido em <strong>React</strong> com
+          <strong>TypeScript</strong>, com foco em desempenho e usabilidade. A
+          interface faz uso do <strong>FullCalendar</strong> para exibição
+          dinâmica dos horários, <strong>styled-components</strong> para
+          estilização modular e organizada, e
+          <strong>Framer Motion</strong> para adicionar animações sutis que
+          tornam a experiência mais fluida e agradável.
+        </li>
+      </ul>
+      <p>
+        O resultado é uma plataforma moderna, funcional e extremamente útil para
+        o público-alvo. Com o StudioSrv, todo o processo de agendamento é feito
+        de forma simples, rápida e confiável — liberando o gestor para outras
+        tarefas e oferecendo autonomia total aos produtores.
+      </p>
+      <div class="galeria-container">
+        <div class="carrossel">
+          <button class="seta seta-esquerda">&#10094;</button>
+
+          <div class="galeria">
+            <img
+              src="../images/StudioSrv/splash.png"
+              alt="Splash-Screen"
+              class="thumb"
+            />
+            <img
+              src="../images/StudioSrv/Login.png"
+              alt="Tela de Login"
+              class="thumb"
+            />
+            <img
+              src="../images/StudioSrv/home.png"
+              alt="Página inicial de Administradores"
+              class="thumb"
+            />
+            <img
+              src="../images/StudioSrv/homeProdutora.png"
+              alt="Página inicial de Produtores"
+              class="thumb"
+            />
+            <img
+              src="../images/StudioSrv/Agendamento.png"
+              alt="Modal de agendamentos"
+              class="thumb"
+            />
+            <img
+              src="../images/StudioSrv/CadastroUsuario.png"
+              alt="Modal de cadastro de usuários"
+              class="thumb"
+            />
+            <img
+              src="../images/StudioSrv/EditarUsuario.png"
+              alt="Modal de edição de usuários"
+              class="thumb"
+            />
+            <img
+              src="../images/StudioSrv/editUser.png"
+              alt="Modal de edição de usuário especifico"
+              class="thumb"
+            />
+            <img
+              src="../images/StudioSrv/Gerenciamento_Estudios.png"
+              alt="Modal de gerenciamento de Estúdios"
+              class="thumb"
+            />
+            <img
+              src="../images/StudioSrv/Gerenciamento_Programas.png"
+              alt="Modal de gerenciamento de Programas"
+              class="thumb"
+            />
+            <img
+              src="../images/StudioSrv/calendario_Produtora.png"
+              alt="Calendario do Mês"
+              class="thumb"
+            />
+          </div>
+
+          <button class="seta seta-direita">&#10095;</button>
+        </div>
+
+        <!-- Lightbox/Modal -->
+        <div class="lightbox" id="lightbox">
+          <span class="close-btn">&times;</span>
+          <img class="lightbox-content" id="lightbox-img" />
+          <div class="caption" id="caption"></div>
+        </div>
+      </div>
+
+      <div class="about-box">
+        <h2>Tecnologias Utilizadas</h2>
+        <ul class="skills-list">
+          <li>Styled-components</li>
+          <li>API Do Google</li>
+          <li>React</li>
+          <li>TypeScript</li>
+          <li>Node</li>
+          <li>GitHub</li>
+          <li>GIT</li>
+          <li>JWT</li>
+          <li>MySQL</li>
+          <li>Prisma</li>
+          <li>fullcalendar</li>
+          <li>Motion</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-text">
+          <h1>Guilherme Carvalho</h1>
+          <p>
+            Desenvolvedor Full Stack apaixonado por construir tanto o Frontend
+            quanto o Backend de sites e aplicações web, entregando soluções
+            digitais completas, escaláveis e eficientes que contribuem
+            diretamente para o sucesso do produto.
+          </p>
+        </div>
+        <div class="footer-social">
+          <a
+            href="https://www.instagram.com/_guihcarvalho_"
+            target="_blank"
+            aria-label="Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/guilherme-carvalho-1b8b08156/"
+            target="_blank"
+            aria-label="LinkedIn"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a
+            href="https://github.com/cGuilhermec"
+            aria-label="GitHub"
+            target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <i class="fas fa-copyright"></i> Copyright 2025. Made by Guilherme
+        Carvalho
+      </div>
+    </footer>
+
+    <script src="../scripts/NavBar.js"></script>
+  </body>
+</html>

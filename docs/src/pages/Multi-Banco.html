@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi-Banco</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    /* Adicione isso no head do seu HTML para os ícones */
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="../css/Navbar.css" />
+    <link rel="stylesheet" href="../css/GestaoInteligente.css" />
+
+    <script src="../scripts/Gestao-Inteligente.js" defer></script>
+  </head>
+  <body>
+    <header class="navbar" id="navbar">
+      <div class="logo">Guilherme Carvalho</div>
+      <div class="nav-container">
+        <nav class="nav-links">
+          <a href="../../index.html#home">Início</a>
+          <a href="../../index.html#sobre">Sobre Mim</a>
+          <a href="../../index.html#projetos">Projetos</a>
+          <a href="../../index.html#contato">Contato</a>
+        </nav>
+        <!-- Botão menu (vai ser manipulado via JS) -->
+        <button class="menu-button" aria-label="Abrir menu de navegação">
+          ☰
+        </button>
+      </div>
+    </header>
+
+    <section class="inicio">
+      <h1>Multi-Banco</h1>
+      <p>
+        Esta página apresenta o estudo completo do sistema multi-banco de dados,
+        uma solução distribuída desenvolvida para garantir alta disponibilidade,
+        com suporte a PostgreSQL, MongoDB e MySQL integrados em tempo real.
+      </p>
+    </section>
+
+    <section class="conteudo">
+      <img src="../images/Multi-Banco/Banco.png" alt="" />
+      <h2>Overview</h2>
+      <p>
+        Desenvolvi uma aplicação robusta com foco em alta disponibilidade,
+        escalabilidade e integração entre diferentes tecnologias de banco de
+        dados. O principal objetivo do projeto foi criar um sistema capaz de
+        operar com múltiplos servidores de dados simultaneamente, garantindo
+        flexibilidade na escolha do banco, redundância e maior confiabilidade no
+        armazenamento e recuperação das informações.
+      </p>
+      <h2>Objetivo</h2>
+      <p>
+        A proposta foi criar um sistema completo capaz de se comunicar com
+        <strong>PostgreSQL</strong>, <strong>MongoDB</strong> e
+        <strong>MySQL</strong>, utilizando uma arquitetura distribuída que
+        permite a escolha do banco de dados em tempo de execução, além de
+        garantir a continuidade do serviço mesmo com a falha de um dos
+        servidores.
+      </p>
+      <h2>Principais Funcionalidades</h2>
+      <ul>
+        <li>
+          Integração simultânea com três bancos de dados distintos: PostgreSQL,
+          MongoDB e MySQL;
+        </li>
+        <li>
+          Capacidade de gravação e recuperação de dados a partir de qualquer um
+          dos bancos, com fallback automático;
+        </li>
+        <li>
+          Escolha dinâmica do banco para operações específicas via front-end;
+        </li>
+        <li>
+          Arquitetura distribuída com três servidores independentes para
+          garantir alta disponibilidade;
+        </li>
+        <li>
+          Interface moderna e intuitiva desenvolvida com React e TypeScript.
+        </li>
+      </ul>
+      <h2>Stack Tecnológica</h2>
+      <ul>
+        <li>
+          <strong>Front-end:</strong> Desenvolvido em
+          <strong>React.js com TypeScript</strong>, priorizando tipagem forte e
+          segurança na manipulação dos dados;
+        </li>
+        <li>
+          <strong>Back-end:</strong> Criado com
+          <strong>Node.js + TypeScript</strong>, com uso de diferentes
+          bibliotecas e drivers para comunicação com cada banco de dados;
+        </li>
+        <li>
+          <strong>Banco de Dados:</strong> PostgreSQL para dados relacionais
+          estruturados, MongoDB para dados semi-estruturados e flexíveis, e
+          MySQL como alternativa relacional robusta;
+        </li>
+        <li>
+          <strong>Arquitetura:</strong> Distribuída, com três instâncias
+          independentes que podem ser executadas em diferentes servidores,
+          garantindo maior resiliência e alta disponibilidade. Todas as
+          instâncias seguem a arquitetura MSC (Model-Service-Controller),
+          proporcionando um controle mais eficiente dos dados e facilitando a
+          manutenção e escalabilidade do sistema.
+        </li>
+      </ul>
+      <h2>Diferenciais do Projeto</h2>
+      <ul>
+        <li>
+          Flexibilidade na escolha do banco mais adequado para cada tipo de
+          operação;
+        </li>
+        <li>
+          Facilidade para testes de desempenho e comparação entre bancos
+          distintos;
+        </li>
+        <li>
+          Alta resiliência contra falhas em serviços de dados individuais;
+        </li>
+        <li>
+          Código limpo, modular e bem documentado, seguindo boas práticas de
+          desenvolvimento.
+        </li>
+      </ul>
+      <p>
+        Este projeto foi desenvolvido do zero, com atenção especial à
+        organização do código, modularidade, reusabilidade de componentes e foco
+        na escalabilidade. Foi uma excelente oportunidade para aprofundar
+        conhecimentos em bancos de dados distintos, arquiteturas distribuídas e
+        integração entre múltiplos serviços.
+      </p>
+
+      <div class="galeria-container">
+        <div class="carrossel">
+          <button class="seta seta-esquerda">&#10094;</button>
+
+          <div class="galeria">
+            <img
+              src="../images/Multi-Banco/home.png"
+              alt="Home"
+              class="thumb"
+            />
+            <img
+              src="../images/Multi-Banco/Modal com os CPFs.png"
+              alt="Modal com a inserção de dados"
+              class="thumb"
+            />
+            <img
+              src="../images/Multi-Banco/Logs gerados.png"
+              alt="Logs gerados pelo sistema"
+              class="thumb"
+            />
+          </div>
+
+          <button class="seta seta-direita">&#10095;</button>
+        </div>
+
+        <!-- Lightbox/Modal -->
+        <div class="lightbox" id="lightbox">
+          <span class="close-btn">&times;</span>
+          <img class="lightbox-content" id="lightbox-img" />
+          <div class="caption" id="caption"></div>
+        </div>
+      </div>
+
+      <div class="about-box">
+        <h2>Tecnologias Utilizadas</h2>
+        <ul class="skills-list">
+          <li>React.js</li>
+          <li>TypeScript</li>
+          <li>Node.js</li>
+          <li>MSC</li>
+          <li>GitHub</li>
+          <li>GIT</li>
+          <li>PostgreSQL</li>
+          <li>MySQL</li>
+          <li>MongoDB</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-text">
+          <h1>Guilherme Carvalho</h1>
+          <p>
+            Desenvolvedor Full Stack apaixonado por construir tanto o Frontend
+            quanto o Backend de sites e aplicações web, entregando soluções
+            digitais completas, escaláveis e eficientes que contribuem
+            diretamente para o sucesso do produto.
+          </p>
+        </div>
+        <div class="footer-social">
+          <a
+            href="https://www.instagram.com/_guihcarvalho_"
+            target="_blank"
+            aria-label="Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/guilherme-carvalho-1b8b08156/"
+            target="_blank"
+            aria-label="LinkedIn"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a
+            href="https://github.com/cGuilhermec"
+            aria-label="GitHub"
+            target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <i class="fas fa-copyright"></i> Copyright 2025. Made by Guilherme
+        Carvalho
+      </div>
+    </footer>
+
+    <script src="../scripts/NavBar.js"></script>
+  </body>
+</html>

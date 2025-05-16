@@ -1,0 +1,114 @@
+/* Navbar - Cabeçalho */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #FFFFFF;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.logo {
+  font-size: 1.3rem;
+  font-family: 'JetBrains Mono', monospace;
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+/* Container para nav e botão */
+.nav-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Navegação - Desktop */
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.nav-links a:hover {
+  color: #7843E9;
+}
+
+/* Estilo para o botão ☰ */
+.menu-button {
+  display: none; /* Inicialmente invisível */
+  background-color: transparent;
+  border: none;
+  font-size: 2.5rem; /* Aumenta o tamanho do ícone */
+  cursor: pointer;
+  color: #2c3e50;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  position: relative;
+}
+
+/* Efeito de hover no botão */
+.menu-button:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Cor de fundo no hover */
+  transform: scale(1.1); /* Aumenta um pouco o botão quando hover */
+}
+
+/* Efeito ativo (clicado) */
+.menu-button:active {
+  background-color: rgba(0, 0, 0, 0.2); /* Cor de fundo no clique */
+  transform: scale(0.95); /* Um pequeno efeito de "pressionamento" */
+}
+
+/* Exibir o botão apenas em telas pequenas (máximo 768px) */
+@media (max-width: 768px) {
+  .menu-button {
+    display: block; /* Exibe o botão em dispositivos móveis */
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 103px;
+    left: 0;
+    width: 100%;
+    background-color: #FFFFFF;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    gap: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(-300%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 9;
+  }
+
+  .nav-links.active {
+    transform: translateY(0);
+  }
+}
+
+/* Responsividade para telas ainda menores (máximo 480px) */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px 12px;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+  }
+
+  .menu-button {
+    font-size: 2.2rem; /* Reduz o tamanho do ícone em telas menores */
+  }
+}

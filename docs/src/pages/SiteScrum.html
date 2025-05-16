@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scrum</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    /* Adicione isso no head do seu HTML para os ícones */
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="../css/Navbar.css" />
+    <link rel="stylesheet" href="../css/GestaoInteligente.css" />
+
+    <script src="../scripts/Gestao-Inteligente.js" defer></script>
+  </head>
+  <body>
+    <header class="navbar" id="navbar">
+      <div class="logo">Guilherme Carvalho</div>
+      <div class="nav-container">
+        <nav class="nav-links">
+          <a href="../../index.html#home">Início</a>
+          <a href="../../index.html#sobre">Sobre Mim</a>
+          <a href="../../index.html#projetos">Projetos</a>
+          <a href="../../index.html#contato">Contato</a>
+        </nav>
+        <!-- Botão menu (vai ser manipulado via JS) -->
+        <button class="menu-button" aria-label="Abrir menu de navegação">
+          ☰
+        </button>
+      </div>
+    </header>
+
+    <section class="inicio">
+      <h1>Site Scrum</h1>
+      <p>
+        Esta página apresenta o estudo completo do Site Scrum, uma aplicação web
+        desenvolvida com fins didáticos pela WebWizards Pro, demonstrando a
+        aplicação da metodologia ágil Scrum em um ambiente educacional.
+      </p>
+      <a
+        href="https://cguilhermec.github.io/WebWizardsPro/"
+        target="_blank"
+        class="btn"
+        >Link do Projeto</a
+      >
+    </section>
+
+    <section class="conteudo">
+      <img src="../images/Site Scrum/Site Scrum.png" alt="" />
+      <h2>Overview</h2>
+      <p>
+        O <strong>Site Scrum</strong> é uma aplicação web criada com o objetivo
+        de exemplificar, de forma prática, como aplicar os conceitos da
+        metodologia Scrum em um projeto real. A solução foi desenvolvida para
+        fins educacionais, sendo utilizada como ferramenta de apoio ao
+        aprendizado de gestão ágil e desenvolvimento front-end.
+      </p>
+      <p>
+        A plataforma é intuitiva, acessível e funcional, permitindo que os
+        usuários preencham formulários de avaliação e, ao final, obtenham
+        certificados personalizados. Seu foco está em proporcionar uma
+        experiência agradável e clara, com ênfase na usabilidade e organização
+        das informações.
+      </p>
+      <h2>Principais Funcionalidades</h2>
+      <ul>
+        <li>
+          <strong>Formulário de avaliação:</strong> Usuários podem preencher um
+          questionário para demonstrar seus conhecimentos ou avaliar o conteúdo
+          apresentado.
+        </li>
+        <li>
+          <strong>Geração de certificado:</strong> Após o preenchimento e envio
+          do formulário, o sistema gera um certificado de participação
+          automaticamente.
+        </li>
+        <li>
+          <strong>Interface responsiva e acessível:</strong> O layout foi
+          pensado para ser claro, adaptável a diferentes dispositivos e
+          acessível para todos os perfis de usuários.
+        </li>
+        <li>
+          <strong>Aplicação da metodologia Scrum:</strong> O desenvolvimento
+          seguiu etapas de planejamento, sprints e reuniões semanais, simulando
+          o ambiente de um time ágil.
+        </li>
+      </ul>
+      <h2>Arquitetura e Tecnologias Utilizadas</h2>
+      <p>
+        O Site Scrum foi desenvolvido com foco em simplicidade, acessibilidade e
+        didática, utilizando apenas recursos de front-end para viabilizar o
+        projeto sem a necessidade de um back-end.
+      </p>
+      <ul>
+        <li>
+          <strong>Front-end:</strong> Construído com <strong>HTML</strong>,
+          <strong>CSS</strong> e <strong>JavaScript</strong>, contando também
+          com o <strong>Bootstrap</strong> para estilização rápida e responsiva
+          da interface.
+        </li>
+      </ul>
+      <p>
+        O resultado é uma aplicação leve, funcional e voltada para o
+        aprendizado. Com o Site Scrum, os usuários vivenciam na prática o uso da
+        metodologia Scrum em um projeto web e experimentam recursos como
+        formulários interativos e emissão de certificados, tudo em um ambiente
+        amigável e acessível.
+      </p>
+
+      <div class="galeria-container">
+        <div class="carrossel">
+          <button class="seta seta-esquerda">&#10094;</button>
+
+          <div class="galeria">
+            <img
+              src="../images/SiteScrum/Splash-Screen.png"
+              alt="Splash-Screen"
+              class="thumb"
+            />
+            <img src="../images/SiteScrum/home.png" alt="Home" class="thumb" />
+            <img
+              src="../images/SiteScrum/home2.png"
+              alt="Tela principal"
+              class="thumb"
+            />
+            <img
+              src="../images/SiteScrum/Quiz.png"
+              alt="Tela do Quiz"
+              class="thumb"
+            />
+            <img
+              src="../images/SiteScrum/pergunta_Quiz.png"
+              alt="Modal do Quiz"
+              class="thumb"
+            />
+            <img
+              src="../images/SiteScrum/Resultado_Quiz.png"
+              alt="Resultado do Quiz"
+              class="thumb"
+            />
+            <img
+              src="../images/SiteScrum/Certificado_Quiz.png"
+              alt="Certificado do Quiz"
+              class="thumb"
+            />
+          </div>
+
+          <button class="seta seta-direita">&#10095;</button>
+        </div>
+
+        <!-- Lightbox/Modal -->
+        <div class="lightbox" id="lightbox">
+          <span class="close-btn">&times;</span>
+          <img class="lightbox-content" id="lightbox-img" />
+          <div class="caption" id="caption"></div>
+        </div>
+      </div>
+
+      <div class="about-box">
+        <h2>Tecnologias Utilizadas</h2>
+        <ul class="skills-list">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Bootstrap</li>
+          <li>JavaScript</li>
+          <li>GitHub</li>
+          <li>GIT</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-text">
+          <h1>Guilherme Carvalho</h1>
+          <p>
+            Desenvolvedor Full Stack apaixonado por construir tanto o Frontend
+            quanto o Backend de sites e aplicações web, entregando soluções
+            digitais completas, escaláveis e eficientes que contribuem
+            diretamente para o sucesso do produto.
+          </p>
+        </div>
+        <div class="footer-social">
+          <a
+            href="https://www.instagram.com/_guihcarvalho_"
+            target="_blank"
+            aria-label="Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/guilherme-carvalho-1b8b08156/"
+            target="_blank"
+            aria-label="LinkedIn"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a
+            href="https://github.com/cGuilhermec"
+            aria-label="GitHub"
+            target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <i class="fas fa-copyright"></i> Copyright 2025. Made by Guilherme
+        Carvalho
+      </div>
+    </footer>
+
+    <script src="../scripts/NavBar.js"></script>
+  </body>
+</html>

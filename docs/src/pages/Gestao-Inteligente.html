@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LifePlus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    /* Adicione isso no head do seu HTML para os ícones */
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="../css/Navbar.css" />
+    <link rel="stylesheet" href="../css/GestaoInteligente.css" />
+
+    <script src="../scripts/Gestao-Inteligente.js" defer></script>
+  </head>
+  <body>
+    <header class="navbar" id="navbar">
+      <div class="logo">Guilherme Carvalho</div>
+      <div class="nav-container">
+        <nav class="nav-links">
+          <a href="../../index.html#home">Início</a>
+          <a href="../../index.html#sobre">Sobre Mim</a>
+          <a href="../../index.html#projetos">Projetos</a>
+          <a href="../../index.html#contato">Contato</a>
+        </nav>
+        <!-- Botão menu (vai ser manipulado via JS) -->
+        <button class="menu-button" aria-label="Abrir menu de navegação">
+          ☰
+        </button>
+      </div>
+    </header>
+
+    <section class="inicio">
+      <h1>Gestão Inteligente de Calorias com IA</h1>
+      <p>
+        Esta página apresenta o estudo completo do LifePlus, uma solução
+        inovadora para monitoramento nutricional inteligente, incluindo visão
+        geral do projeto, tecnologias utilizadas.
+      </p>
+    </section>
+
+    <section class="conteudo">
+      <img src="../images/LifePlus/lifeplus.png" alt="" />
+      <h2>Overview</h2>
+      <p>
+        O LifePlus é um projeto desenvolvido pela nossa equipe com o objetivo de
+        facilitar o controle de calorias e promover hábitos mais saudáveis. A
+        plataforma oferece uma experiência completa e personalizada para quem
+        busca melhorar sua alimentação e alcançar metas nutricionais. Principais
+        funcionalidades:
+      </p>
+      <ul>
+        <li>
+          <strong>Cadastro de refeições:</strong> Permite aos usuários
+          registrarem suas refeições e as calorias consumidas.
+        </li>
+        <li>
+          <strong>Cadastro de refeições:</strong> Possibilita cadastrar
+          alimentos com suas respectivas informações nutricionais.
+        </li>
+        <li>
+          <strong>Edição de dados:</strong> Facilita a atualização de refeições
+          e alimentos já cadastrados.
+        </li>
+        <li>
+          <strong>Gráficos de acompanhamento:</strong>Exibe visualizações
+          gráficas que ajudam no monitoramento diário da ingestão calórica.
+        </li>
+      </ul>
+      <p>
+        Além dessas funcionalidades, o LifePlus conta com o apoio de uma
+        <strong>Inteligência Artificial</strong>, que atua como uma assistente
+        pessoal no controle da dieta. Com base nos dados do usuário, a IA
+        oferece:
+      </p>
+      <ul>
+        <li>Sugestões de refeições para atingir a meta calórica diária;</li>
+        <li>Alertas quando o consumo está abaixo ou acima do ideal;</li>
+        <li>
+          Recomendações de <strong>dietas</strong>,
+          <strong>receitas do dia</strong>, <strong>treinos</strong> e até um
+          <strong>cardápio semanal completo</strong>;
+        </li>
+        <li>
+          Tudo isso de forma <strong>personalizada</strong>, conforme os
+          objetivos e o estilo de vida de cada usuário.
+        </li>
+      </ul>
+      <p>
+        O LifePlus foi pensado para ser uma solução prática, inteligente e
+        acessível, tornando o acompanhamento nutricional mais simples, eficiente
+        e motivador.
+      </p>
+      <h2>Arquitetura e Tecnologias Utilizadas</h2>
+      <p>
+        O desenvolvimento do LifePlus foi dividido em duas principais camadas:
+        back-end e front-end, com foco em segurança, escalabilidade e
+        experiência do usuário.
+      </p>
+      <ul>
+        <li>
+          <strong>Back-end:</strong> Estruturado com o padrão MSC, utilizamos
+          <strong>Node.js</strong> com <strong>TypeScript</strong> para garantir
+          tipagem segura e organização do código. A autenticação é feita com
+          <strong>JWT</strong>, e as senhas dos usuários são protegidas com
+          <strong>bcryptjs</strong>. O banco de dados utilizado é o
+          <strong>MongoDB</strong>, acessado via <strong>Mongoose</strong> para
+          facilitar a modelagem e as consultas.
+        </li>
+        <li>
+          <strong>Inteligência Artificial:</strong> Integrada no back-end, nossa
+          IA tem acesso seguro aos dados dos usuários para oferecer sugestões
+          personalizadas de dietas, treinos e receitas. Ela atua como uma
+          assistente de saúde digital, auxiliando na tomada de decisões para uma
+          vida mais equilibrada.
+        </li>
+        <li>
+          <strong>Front-end:</strong> Desenvolvido em <strong>React</strong> com
+          <strong>TypeScript</strong>, garantindo uma integração eficiente com o
+          back-end e uma interface moderna e intuitiva. Utilizamos
+          <strong>Chart.js</strong> para exibir os gráficos de evolução de forma
+          clara e atrativa.
+        </li>
+        <li>
+          <strong>Base de dados nutricionais:</strong> Utilizamos a
+          <strong>tabela TACO</strong> para garantir informações precisas sobre
+          nutrientes e calorias dos alimentos cadastrados.
+        </li>
+        <li>
+          <strong>Chat com a IA:</strong> Um chat localizado no canto inferior
+          da tela permite que o usuário se comunique diretamente com a
+          Inteligência Artificial, tirando dúvidas e recebendo orientações em
+          tempo real.
+        </li>
+        <li>
+          <strong>Exportação de dados:</strong> Utilizamos a biblioteca
+          <strong>xlsx</strong> para gerar relatórios em formato Excel,
+          permitindo que os usuários imprimam e compartilhem essas informações
+          com seus profissionais de saúde.
+        </li>
+      </ul>
+      <p>
+        Com essa arquitetura robusta e moderna, o LifePlus oferece uma
+        plataforma completa e inteligente, pronta para transformar a forma como
+        os usuários cuidam da alimentação e da saúde.
+      </p>
+
+      <div class="galeria-container">
+        <div class="carrossel">
+          <button class="seta seta-esquerda">&#10094;</button>
+
+          <div class="galeria">
+            <img
+              src="../images/LifePlus/login.png"
+              alt="Tela de login"
+              class="thumb"
+            />
+            <img
+              src="../images/LifePlus/cadastro.png"
+              alt="Tela de Cadastro"
+              class="thumb"
+            />
+            <img
+              src="../images/LifePlus/home.png"
+              alt="Página inicial"
+              class="thumb"
+            />
+            <img
+              src="../images/LifePlus/Cadstro_calorias.png"
+              alt="Cadastro de calorias"
+              class="thumb"
+            />
+            <img
+              src="../images/LifePlus/Visualizar_refeicao.png"
+              alt="Visualizar refeição"
+              class="thumb"
+            />
+            <img
+              src="../images/LifePlus/ChatBoot.png"
+              alt="ChatBot"
+              class="thumb"
+            />
+          </div>
+
+          <button class="seta seta-direita">&#10095;</button>
+        </div>
+
+        <!-- Lightbox/Modal -->
+        <div class="lightbox" id="lightbox">
+          <span class="close-btn">&times;</span>
+          <img class="lightbox-content" id="lightbox-img" />
+          <div class="caption" id="caption"></div>
+        </div>
+      </div>
+
+      <div class="about-box">
+        <h2>Tecnologias Utilizadas</h2>
+        <ul class="skills-list">
+          <li>Styled-components</li>
+          <li>IA</li>
+          <li>React</li>
+          <li>TypeScript</li>
+          <li>Node</li>
+          <li>GitHub</li>
+          <li>GIT</li>
+          <li>JWT</li>
+          <li>MongoDB</li>
+          <li>Mongoose</li>
+          <li>Figma</li>
+          <li>Trello</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-text">
+          <h1>Guilherme Carvalho</h1>
+          <p>
+            Desenvolvedor Full Stack apaixonado por construir tanto o Frontend
+            quanto o Backend de sites e aplicações web, entregando soluções
+            digitais completas, escaláveis e eficientes que contribuem
+            diretamente para o sucesso do produto.
+          </p>
+        </div>
+        <div class="footer-social">
+          <a
+            href="https://www.instagram.com/_guihcarvalho_"
+            target="_blank"
+            aria-label="Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/guilherme-carvalho-1b8b08156/"
+            target="_blank"
+            aria-label="LinkedIn"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a
+            href="https://github.com/cGuilhermec"
+            aria-label="GitHub"
+            target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <i class="fas fa-copyright"></i> Copyright 2025. Made by Guilherme
+        Carvalho
+      </div>
+    </footer>
+
+    <script src="../scripts/NavBar.js"></script>
+  </body>
+</html>

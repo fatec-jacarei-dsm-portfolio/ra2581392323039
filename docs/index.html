@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio de Guilherme</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    /* Adicione isso no head do seu HTML para os ícones */
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <link rel="stylesheet" href="./src/css/About.css" />
+    <link rel="stylesheet" href="./src/css/Projects.css" />
+    <link rel="stylesheet" href="./src/css/contact.css" />
+    <link rel="stylesheet" href="./src/css/GestaoInteligente.css" />
+    <link rel="stylesheet" href="./src/css/Navbar.css" />
+  </head>
+
+  <body>
+    <!-- Splash Screen -->
+    <div class="splash-screen" id="splash"></div>
+
+    <!-- Header (aparece após o splash) -->
+    <header class="navbar" id="navbar">
+      <div class="logo">Guilherme Carvalho</div>
+      <div class="nav-container">
+        <nav class="nav-links">
+          <a href="#home">Início</a>
+          <a href="#sobre">Sobre Mim</a>
+          <a href="#projetos">Projetos</a>
+          <a href="#contato">Contato</a>
+        </nav>
+        <!-- Botão menu (vai ser manipulado via JS) -->
+        <button class="menu-button" aria-label="Abrir menu de navegação">
+          ☰
+        </button>
+      </div>
+    </header>
+
+    <!-- Seção 1: Home -->
+    <section id="home" class="home-hero__content hidden">
+      <!-- Barra Lateral com Ícones -->
+      <div class="social-bar">
+        <a
+          href="https://www.instagram.com/_guihcarvalho_"
+          target="_blank"
+          aria-label="Instagram"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/guilherme-carvalho-1b8b08156/"
+          target="_blank"
+          aria-label="LinkedIn"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+        <a
+          href="https://github.com/cGuilhermec"
+          aria-label="GitHub"
+          target="_blank"
+          ><i class="fab fa-github"></i
+        ></a>
+      </div>
+
+      <h1>Olá, eu sou Guilherme</h1>
+      <p>
+        Um Desenvolvedor de Software focado em resultados, criando soluções
+        digitais que impulsionam o sucesso do produto. Vamos construir algo
+        incrível juntos?
+      </p>
+      <a href="#projetos" class="btn">Projetos</a>
+
+      <!-- Mouse Animation -->
+      <div class="mouse-container">
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 2: Sobre Mim -->
+    <section id="sobre" class="content about-section hidden">
+      <h2>SOBRE MIM</h2>
+      <p>
+        Aqui você encontrará mais sobre mim, meu trabalho e minhas habilidades,
+        com foco em desenvolvimento de software e tecnologias modernas.
+      </p>
+
+      <div class="about-content">
+        <!-- Bloco Conheça-me -->
+        <div class="about-box">
+          <h2>Conheça-me!</h2>
+          <p>
+            Sou um <strong>Desenvolvedor Full Stack</strong>, criando e
+            gerenciando tanto o Frontend quanto o Backend de Websites e
+            Aplicações Web, garantindo soluções completas e eficazes que
+            impulsionam o sucesso do produto. Confira alguns dos meus trabalhos
+            na seção de Projetos. Também gosto de compartilhar conteúdos
+            relacionados ao que aprendi ao longo dos anos em Desenvolvimento
+            Web, ajudando outros membros da Comunidade Dev. Sinta-se à vontade
+            para se conectar ou me seguir no LinkedIn e Instagram. Estou aberto
+            a oportunidades de trabalho onde eu possa contribuir, aprender e
+            crescer. Se você tem uma boa oportunidade que combine com minhas
+            habilidades e experiência, não hesite em entrar em contato.
+          </p>
+        </div>
+
+        <!-- Bloco Minhas Habilidades -->
+        <div class="about-box">
+          <h2>Minhas Habilidades</h2>
+          <div class="skills-list">
+            <ul>
+              HTML
+            </ul>
+            <ul>
+              CSS
+            </ul>
+            <ul>
+              React
+            </ul>
+            <ul>
+              React Native
+            </ul>
+            <ul>
+              TypeScript
+            </ul>
+            <ul>
+              GitHub
+            </ul>
+            <ul>
+              GIT
+            </ul>
+            <ul>
+              MySQL
+            </ul>
+            <ul>
+              Postgres
+            </ul>
+            <ul>
+              MongoDB
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 3: Projetos -->
+    <section id="projetos" class="content projects-section hidden">
+      <div class="projects-header">
+        <h2>Projetos</h2>
+        <p>
+          Aqui você encontrará alguns dos projetos pessoais que desenvolvi, cada
+          um com seu propósito, e alguns como estudo de caso.
+        </p>
+      </div>
+
+      <!-- Contêiner principal dos projetos -->
+      <div class="projects-container">
+        <!-- Projeto 01 -->
+        <div class="projects-img">
+          <img src="./src/images/LifePlus/lifeplus.png" alt="" />
+          <div class="project-text">
+            <h3>LifePlus</h3>
+            <p>
+              Plataforma que auxilia no controle da alimentação e adoção de
+              hábitos saudáveis. Com inteligência artificial, oferece
+              recomendações personalizadas de dieta e treinos, além de responder
+              dúvidas sobre nutrição e exercícios. Possui interface intuitiva,
+              gráficos e painéis interativos para monitoramento do progresso.
+              Desenvolvida com TypeScript, React e MongoDB.
+            </p>
+            <a
+              href="./src/pages/Gestao-Inteligente.html"
+              target="_blank"
+              class="btn-project"
+              >Projeto</a
+            >
+          </div>
+        </div>
+        <!-- Projeto 02 -->
+        <div class="projects-img">
+          <img src="./src/images/StudioSrv/StudioSRV.png" alt="" />
+          <div class="project-text">
+            <h3>StudioSrv</h3>
+            <p>
+              StudioSrv é uma aplicação web em desenvolvimento para reserva de
+              estúdios. Voltada a produtores, permite consultar a
+              disponibilidade de horários e realizar agendamentos de forma
+              prática, evitando conflitos. A plataforma garante uma gestão
+              eficiente das reservas. Desenvolvida com React e TypeScript no
+              frontend, Node.js com TypeScript no backend e MySQL como banco de
+              dados.
+            </p>
+            <a
+              href="./src/pages/StudioSrv.html"
+              target="_blank"
+              class="btn-project"
+              >Projeto</a
+            >
+          </div>
+        </div>
+        <!-- Projeto 03 -->
+        <div class="projects-img">
+          <img src="./src/images/SiteScrum/Scrum.png" alt="" />
+          <div class="project-text">
+            <h3>Site Scrum</h3>
+            <p>
+              Plataforma interativa para ensino de metodologias ágeis, com foco
+              em Scrum. Oferece módulos didáticos, simuladores de cerimônias e
+              quizzes para validação do aprendizado. Desenvolvida com HTML, CSS,
+              Bootstrap, JavaScript e prototipagem no Figma.
+            </p>
+            <a
+              href="./src/pages/SiteScrum.html"
+              target="_blank"
+              class="btn-project"
+              >Projeto</a
+            >
+          </div>
+        </div>
+        <!-- Projeto 04 -->
+        <div class="projects-img">
+          <img
+            src="./src/images/Delicias da Carol/Delicias_Da_Carol.png"
+            alt=""
+          />
+          <div class="project-text">
+            <h3>Delícias da Carol</h3>
+            <p>
+              Plataforma para gestão comercial com controle de vendas, estoque e
+              pagamentos. Oferece relatórios precisos, alertas inteligentes e
+              gráficos interativos para acompanhamento financeiro. Desenvolvida
+              com TypeScript, React Native e MySQL/Prisma.
+            </p>
+            <a
+              href="./src/pages/DeliciasCarol.html"
+              target="_blank"
+              class="btn-project"
+              >Projeto</a
+            >
+          </div>
+        </div>
+        <!-- Projeto 05 -->
+        <div class="projects-img">
+          <img src="./src/images/Visiona/Visiona.png" alt="" />
+          <div class="project-text">
+            <h3>Visiona</h3>
+            <p>
+              Plataforma web desenvolvida para otimizar o processo de mapeamento
+              de uso e ocupação da terra. Permite o cadastro de projetos,
+              delimitação de áreas, atribuição de tarefas e carregamento de
+              polígonos para edição. Conta com geração de estatísticas, filtros
+              e exportação de relatórios em PDF. Criada com foco em
+              produtividade e colaboração para empresas de geotecnologia,
+              utilizando TypeScript, Node.js, React e MySQL.
+            </p>
+            <a
+              href="./src/pages/Visiona.html"
+              target="_blank"
+              class="btn-project"
+              >Projeto</a
+            >
+          </div>
+        </div>
+        <!-- Projeto 06 -->
+        <div class="projects-img">
+          <img src="./src/images/Multi-Banco/Banco.png" alt="" />
+          <div class="project-text">
+            <h3>Multi-Banco de Dados com Arquitetura Distribuída</h3>
+            <p>
+              Sistema distribuído com suporte a múltiplos bancos de dados:
+              PostgreSQL, MongoDB e MySQL. Permite a escolha dinâmica do banco
+              para gravação e leitura de dados, com fallback automático para
+              garantir disponibilidade. Desenvolvido com React e TypeScript no
+              front-end, e Node.js no back-end, o projeto garante flexibilidade,
+              escalabilidade e confiabilidade na gestão de dados.
+            </p>
+            <a
+              href="./src/pages/Multi-Banco.html"
+              target="_blank"
+              class="btn-project"
+              >Projeto</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 4: Contato -->
+    <section id="contato" class="content contact-section hidden">
+      <div class="contact-container">
+        <h2>Entre em Contato</h2>
+        <p class="contact-subtitle">
+          Fique à vontade para me contactar por um desses canais
+        </p>
+
+        <div class="contact-cards">
+          <!-- Cartão de E-mail -->
+          <div class="contact-card email-card">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-info">
+              <h3>E-mail</h3>
+              <p>guilherme-9951@live.com</p>
+              <button
+                class="copy-btn"
+                data-clipboard-text="guilherme-9951@live.com"
+              >
+                <i class="far fa-copy"></i> Copiar
+              </button>
+            </div>
+          </div>
+
+          <!-- Cartão de Telefone -->
+          <div class="contact-card phone-card">
+            <div class="contact-icon">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <div class="contact-info">
+              <h3>Telefone</h3>
+              <p>(12) 98240-3733</p>
+              <a href="tel:+5512982403733" class="action-btn">
+                <i class="fas fa-phone"></i> Ligar
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-text">
+          <h1>Guilherme Carvalho</h1>
+          <p>
+            Desenvolvedor Full Stack apaixonado por construir tanto o Frontend
+            quanto o Backend de sites e aplicações web, entregando soluções
+            digitais completas, escaláveis e eficientes que contribuem
+            diretamente para o sucesso do produto.
+          </p>
+        </div>
+        <div class="footer-social">
+          <a
+            href="https://www.instagram.com/_guihcarvalho_"
+            target="_blank"
+            aria-label="Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/guilherme-carvalho-1b8b08156/"
+            target="_blank"
+            aria-label="LinkedIn"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a
+            href="https://github.com/cGuilhermec"
+            aria-label="GitHub"
+            target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <i class="fas fa-copyright"></i> Copyright 2025. Made by Guilherme
+        Carvalho
+      </div>
+    </footer>
+
+    <script src="./src/scripts/NavBar.js"></script>
+    <script src="./src/scripts/splash.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+    <script src="./src/scripts/contact.js"></script>
+  </body>
+</html>

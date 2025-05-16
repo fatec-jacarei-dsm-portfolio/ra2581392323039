@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visiona</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    /* Adicione isso no head do seu HTML para os ícones */
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="../css/Navbar.css" />
+    <link rel="stylesheet" href="../css/GestaoInteligente.css" />
+
+    <script src="../scripts/Gestao-Inteligente.js" defer></script>
+  </head>
+  <body>
+    <header class="navbar" id="navbar">
+      <div class="logo">Guilherme Carvalho</div>
+      <div class="nav-container">
+        <nav class="nav-links">
+          <a href="../../index.html#home">Início</a>
+          <a href="../../index.html#sobre">Sobre Mim</a>
+          <a href="../../index.html#projetos">Projetos</a>
+          <a href="../../index.html#contato">Contato</a>
+        </nav>
+        <!-- Botão menu (vai ser manipulado via JS) -->
+        <button class="menu-button" aria-label="Abrir menu de navegação">
+          ☰
+        </button>
+      </div>
+    </header>
+
+    <section class="inicio">
+      <h1>Visiona</h1>
+      <p>
+        Esta página apresenta o estudo completo do sistema de mapeamento
+        colaborativo (visiona), uma aplicação web criada para otimizar projetos
+        de geotecnologia, permitindo o controle de áreas, estatísticas e
+        exportações em PDF.
+      </p>
+    </section>
+
+    <section class="conteudo">
+      <img src="../images/Visiona/Visiona.png" alt="" />
+      <h2>Overview</h2>
+      <p>
+        O <strong>Sistema de Gestão de Mapeamento Colaborativo</strong> foi um
+        projeto desenvolvido individualmente com o objetivo de atender uma
+        demanda real da empresa Visiona, voltada ao setor de geotecnologias. A
+        solução foi pensada para facilitar e otimizar o processo de mapeamento
+        do uso e ocupação do solo, oferecendo uma plataforma web moderna,
+        intuitiva e eficiente.
+      </p>
+      <p>
+        A aplicação permite o gerenciamento completo de projetos de mapeamento,
+        desde a criação até o controle de qualidade das informações geradas,
+        integrando usuários com diferentes funções e garantindo a precisão das
+        informações por meio de ferramentas específicas de controle e análise.
+      </p>
+      <h2>Principais Funcionalidades</h2>
+      <ul>
+        <li>
+          Cadastro de projetos e usuários com níveis de permissão (editores e
+          revisores);
+        </li>
+        <li>
+          Delimitação de áreas de projeto e distribuição de zonas de mapeamento
+          para cada usuário;
+        </li>
+        <li>
+          Upload de polígonos e grades de polígonos para facilitar a organização
+          espacial do projeto;
+        </li>
+        <li>
+          Geração automática de estatísticas de mapeamento, qualidade e
+          correções realizadas;
+        </li>
+        <li>
+          Filtros avançados e exportação de relatórios detalhados em PDF para
+          análise e tomada de decisão.
+        </li>
+      </ul>
+      <h2>Arquitetura e Tecnologias Utilizadas</h2>
+      <p>
+        O sistema foi construído com foco na organização do código,
+        escalabilidade e usabilidade. Toda a aplicação foi desenvolvida
+        utilizando boas práticas de desenvolvimento, mantendo um código limpo,
+        seguro e de fácil manutenção.
+      </p>
+      <ul>
+        <li>
+          <strong>Back-end:</strong> Desenvolvido em
+          <strong>Node.js</strong> com <strong>TypeScript</strong>, utilizando o
+          padrão <strong>MSC</strong> (Model-Service-Controller) para manter a
+          separação de responsabilidades. Utilizei
+          <strong>Prisma ORM</strong> para facilitar a comunicação com o banco
+          de dados <strong>MySQL</strong>, garantindo eficiência nas operações e
+          consistência nos dados. A autenticação dos usuários foi implementada
+          com <strong>JWT</strong> e as senhas criptografadas com
+          <strong>Bcrypt</strong>.
+        </li>
+        <li>
+          <strong>Front-end:</strong> A interface foi construída com
+          <strong>React</strong> e <strong>TypeScript</strong>, prezando por uma
+          experiência fluida e intuitiva. Utilizei bibliotecas para facilitar a
+          visualização dos dados, como gráficos estatísticos e manipulação de
+          mapas.
+        </li>
+        <li>
+          <strong>Relatórios e estatísticas:</strong> Integração de geração de
+          relatórios em PDF com dados dinâmicos e estatísticas de mapeamento,
+          revisões e correções realizadas pelos usuários da plataforma.
+        </li>
+      </ul>
+      <p>
+        O projeto foi desenvolvido com foco em atender de forma prática e
+        robusta as necessidades da Visiona, trazendo um sistema colaborativo que
+        melhora a produtividade e o controle dos processos de mapeamento em
+        projetos de geoprocessamento.
+      </p>
+
+      <div class="galeria-container">
+        <div class="carrossel">
+          <button class="seta seta-esquerda">&#10094;</button>
+
+          <div class="galeria">
+            <img
+              src="../images/Visiona/Login.png"
+              alt="Tela de Login"
+              class="thumb"
+            />
+            <img src="../images/Visiona/home.png" alt="Home" class="thumb" />
+            <img
+              src="../images/Visiona/CadastorUser.png"
+              alt="Tela de cadastro de usuário"
+              class="thumb"
+            />
+            <img
+              src="../images/Visiona/editUser.png"
+              alt="Tela de edição do usuário"
+              class="thumb"
+            />
+            <img
+              src="../images/Visiona/VisaoGeral.png"
+              alt="Tela de visão geral"
+              class="thumb"
+            />
+            <img
+              src="../images/Visiona/Por Analista.png"
+              alt="Tela de visão geral por analista"
+              class="thumb"
+            />
+          </div>
+
+          <button class="seta seta-direita">&#10095;</button>
+        </div>
+
+        <!-- Lightbox/Modal -->
+        <div class="lightbox" id="lightbox">
+          <span class="close-btn">&times;</span>
+          <img class="lightbox-content" id="lightbox-img" />
+          <div class="caption" id="caption"></div>
+        </div>
+      </div>
+
+      <div class="about-box">
+        <h2>Tecnologias Utilizadas</h2>
+        <ul class="skills-list">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>React</li>
+          <li>Node</li>
+          <li>TypeScript</li>
+          <li>JWT</li>
+          <li>GitHub</li>
+          <li>GIT</li>
+          <li>PostgreSQL</li>
+          <li>MSC</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-text">
+          <h1>Guilherme Carvalho</h1>
+          <p>
+            Desenvolvedor Full Stack apaixonado por construir tanto o Frontend
+            quanto o Backend de sites e aplicações web, entregando soluções
+            digitais completas, escaláveis e eficientes que contribuem
+            diretamente para o sucesso do produto.
+          </p>
+        </div>
+        <div class="footer-social">
+          <a
+            href="https://www.instagram.com/_guihcarvalho_"
+            target="_blank"
+            aria-label="Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/guilherme-carvalho-1b8b08156/"
+            target="_blank"
+            aria-label="LinkedIn"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a
+            href="https://github.com/cGuilhermec"
+            aria-label="GitHub"
+            target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <i class="fas fa-copyright"></i> Copyright 2025. Made by Guilherme
+        Carvalho
+      </div>
+    </footer>
+
+    <script src="../scripts/NavBar.js"></script>
+  </body>
+</html>

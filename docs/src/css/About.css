@@ -1,0 +1,121 @@
+/* Seção Sobre Mim */
+.about-section {
+  background: #FAFAFa;
+  color: #000;
+  padding: 80px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 60px;
+  font-family: 'Source Sans 3', sans-serif;
+}
+
+/* Título Principal */
+.about-section h2:first-of-type {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+/* Parágrafo Principal */
+.about-section p {
+  max-width: 800px;
+  line-height: 1.8;
+  font-size: 1.2rem;
+  padding: 0 1rem;
+}
+
+/* Container Flex: Conheça-me e Minhas Habilidades */
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
+  flex-wrap: wrap;
+}
+
+/* Blocos */
+.about-box {
+  flex: 1;
+  min-width: 280px;
+}
+
+/* Títulos dos Blocos */
+.about-box h2 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+}
+
+/* Texto à esquerda apenas no primeiro bloco */
+.about-box:first-child p {
+  text-align: left;
+}
+
+/* Lista de Habilidades */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Cada Habilidade (botão/quadrado) */
+.skills-list ul {
+  list-style: none;
+  padding: 15px 25px;
+  border-radius: 10px;
+  background: #7843E9;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.skills-list ul:hover {
+  transform: translateY(-5px);
+}
+
+/* Responsividade */
+
+/* Tablets e telas médias */
+@media (max-width: 1024px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-box:first-child p {
+    text-align: center;
+  }
+
+  .about-box {
+    width: 100%;
+  }
+}
+
+/* Celulares e telas pequenas */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 60px 20px;
+    gap: 40px;
+  }
+
+  .about-section h2:first-of-type {
+    font-size: 2.2rem;
+  }
+
+  .about-box h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-section p {
+    font-size: 1rem;
+  }
+
+  .skills-list ul {
+    font-size: 1rem;
+    padding: 12px 20px;
+  }
+}

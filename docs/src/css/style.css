@@ -1,0 +1,379 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Remove a rolagem do body enquanto o splash está ativo */
+body.no-scroll,
+html.no-scroll {
+  overflow: hidden;
+  height: 100%;
+}
+
+/* Splash Screen - Versão corrigida */
+.splash-screen {
+  position: fixed;
+  inset: 0;
+  background-color: #FAFAFA;
+  color: #141413;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Press Start 2P', cursive;
+  transition: opacity 1s ease-in-out;
+  z-index: 9999;
+  padding: 20px;
+  text-align: center;
+  overflow: auto; /* Permite rolagem se necessário */
+}
+
+.name-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+/* Para telas maiores */
+@media (min-width: 769px) {
+  .splash-screen {
+    font-size: 6rem;
+  }
+}
+
+/* Para tablets */
+@media (max-width: 768px) {
+  .splash-screen {
+    font-size: 3rem;
+  }
+}
+
+/* Para celulares */
+@media (max-width: 480px) {
+  .splash-screen {
+    font-size: 2rem;
+    padding: 10px;
+  }
+  
+  .name-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .name-part + .name-part {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+}
+
+.name-part {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.name-part + .name-part {
+  margin-left: 1rem; /* Espaço horizontal entre os nomes em telas grandes */
+}
+
+.letter {
+  opacity: 0;
+  display: inline-block;
+  animation: fadeIn 0.5s forwards;
+  margin: 0 1px; /* Pequeno espaçamento entre letras */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+.splash-screen.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Header (Navbar) - Responsivo */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #FFFFFF;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.navbar.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.logo {
+  font-size: clamp(1rem, 4vw, 1.5rem);
+  font-family: 'JetBrains Mono', monospace;
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+/* Menu para mobile */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #2c3e50;
+}
+
+.nav-links {
+  display: flex;
+  gap: clamp(15px, 3vw, 30px);
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: bold;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #7843E9;
+}
+
+/* Seções do Portfólio */
+.content {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  position: relative; /* Adicionado para posicionamento relativo */
+}
+
+/* Home Section - Responsivo */
+.home-hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+  max-width: min(90%, 80rem);
+  margin: 5vh auto;
+  padding: 20px;
+}
+
+.home-hero__content h1 {
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.home-hero__content p {
+  color: #333;
+  font-size: clamp(1rem, 3vw, 1.6rem);
+  align-items: center;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  width: 100%;
+  text-align: center;
+}
+
+.btn {
+  background: #7843E9;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+  padding: clamp(1rem, 2vw, 1.2rem) clamp(2rem, 4vw, 3rem);
+  text-decoration: none;
+  transition: transform 0.3s;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+}
+
+/* Social Bar - Ajustado para desaparecer em mobile */
+.social-bar {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #000;
+  padding: 10px 8px;
+  border-radius: 0 10px 10px 0;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+  
+}
+
+.social-bar a {
+  color: #fff; /* Ícones brancos */
+  font-size: 1.5rem; /* Tamanho dos ícones */
+  transition: all 0.3s ease;
+  opacity: 0.8;
+}
+
+/* Efeito Hover nos Ícones */
+.social-bar a:hover {
+  color: #7843E9; /* Roxo no hover */
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* Mouse Indicator - Responsivo */
+.mouse-container {
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.mouse {
+  width: clamp(20px, 6vw, 30px);
+  height: clamp(35px, 10vw, 50px);
+  border: 2px solid #333;
+  border-radius: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wheel {
+  width: clamp(4px, 2vw, 6px);
+  height: clamp(4px, 2vw, 6px);
+  background-color: #333;
+  border-radius: 50%;
+  animation: scroll-animation 1.5s ease-in-out infinite;
+}
+
+@keyframes scroll-animation {
+  0% {
+    transform: translateY(-8px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(8px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-8px);
+    opacity: 1;
+  }
+}
+
+/* Media Queries para Mobile */
+@media (max-width: 768px) {
+  /* Navbar Mobile */
+  .mobile-menu-btn {
+    display: block;
+  }
+  
+  .nav-links {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #FFFFFF;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    transform: translateY(-150%);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .nav-links.active {
+    transform: translateY(0);
+  }
+  
+  /* Social Bar - Escondido em mobile */
+  .social-bar {
+    display: none; /* Remove completamente a barra social em mobile */
+  }
+  
+  /* Ajuste de espaçamento */
+  .home-hero__content {
+    padding-top: 80px;
+  }
+  
+  /* Mouse indicator menor em mobile */
+  .mouse {
+    width: 20px;
+    height: 35px;
+  }
+}
+
+/* Animação das Letras */
+.letter {
+  opacity: 0;
+  display: inline-block;
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Seções adicionais */
+.about-section {
+  background: #FAFAFA;
+  color: #000;
+}
+
+.projects-section {
+  background: #FFFFFF;
+  color: #000;
+}
+
+.contact-section {
+  background: #FAFAFA;
+  color: white;
+}

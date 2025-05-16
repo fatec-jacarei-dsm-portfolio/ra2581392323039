@@ -1,0 +1,177 @@
+#projetos {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 9vh;
+    padding: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: auto; /* Alterado para auto para se adaptar ao conteúdo */
+}
+
+#projetos h2 {
+    font-size: 2.5rem; /* Reduzido para telas menores */
+    margin-bottom: 20px;
+    text-align: center; /* Centralizado para mobile */
+}
+
+#projetos h3 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center; /* Centralizado para mobile */
+}
+
+.projects-section p {
+    max-width: 100%; /* Ajustado para ocupar toda a largura em mobile */
+    line-height: 1.6;
+    font-size: 1.2rem; /* Reduzido para mobile */
+    text-align: justify;
+    padding: 0 1rem; /* Adicionado padding lateral */
+    margin-bottom: 1.5rem;
+}
+
+.projects-img {
+    display: flex;
+    flex-direction: column; /* Coluna para mobile */
+    align-items: center;
+    justify-content: center;
+    margin-top: 5vh; /* Reduzido para mobile */
+    width: 100%;
+}
+
+.projects-img p {
+    font-size: 1rem; /* Ajustado para mobile */
+    color: #666;
+    max-width: 100%; /* Ocupa toda a largura */
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    padding: 0 1rem; /* Adicionado padding lateral */
+    text-align: justify;
+}
+
+.projects-img h2 {
+    font-size: 2rem; /* Reduzido para mobile */
+    margin-bottom: 15px;
+    text-align: center; /* Centralizado para mobile */
+}
+
+.projects-img img {
+    height: auto; /* Altura automática para manter proporções */
+    width: 100%; /* Ocupa toda a largura disponível */
+    max-width: 485px; /* Limite máximo de largura */
+    margin: 0 0 2rem 0; /* Margem apenas na parte inferior */
+}
+
+.btn-project {
+    background: #7843E9;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    width: 100%; /* Ocupa toda a largura em mobile */
+    max-width: 300px; /* Limite máximo */
+    font-weight: 700;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+    padding: 1rem 2rem; /* Reduzido para mobile */
+    font-size: 0.9rem; /* Reduzido para mobile */
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none;
+    cursor: pointer;
+    margin: 0 auto 2rem auto; /* Centralizado */
+    text-align: center;
+}
+
+.btn-project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.projects-header {
+    margin-top: 4vh; /* Reduzido para mobile */
+}
+
+.projects-header p {
+  font-size: 1.6rem;
+  max-width: 900px;
+  margin-bottom: 10vh;
+}
+
+/* Media Queries para diferentes tamanhos de tela */
+
+/* Tablets e telas médias */
+@media (min-width: 768px) {
+    #projetos h2 {
+        font-size: 3rem;
+    }
+    
+    .projects-img {
+        flex-direction: row; /* Linha para tablets e maiores */
+        margin-top: 10vh;
+    }
+    
+    .projects-img img {
+        width: 50%;
+        margin: 0 2rem 0 0;
+    }
+    
+    .projects-img p {
+        width: 50%;
+        padding-right: 2rem;
+    }
+    
+    .btn-project {
+        width: fit-content;
+        margin: 0 0 2rem 0;
+    }
+}
+
+/* Desktop e telas grandes */
+@media (min-width: 1024px) {
+    #projetos {
+        min-height: auto;
+        padding: 4rem 6rem;
+        align-items: center; /* Centraliza todo o conteúdo */
+        text-align: center;
+    }
+
+    .projects-img {
+        flex-direction: row;
+        align-items: center; /* Alinha verticalmente ao centro */
+        justify-content: center; /* Centraliza horizontalmente */
+        gap: 3rem;
+        margin-left: 15vh;
+    }
+
+    .projects-img img {
+        width: 45%;
+        height: auto;
+        max-width: 500px;
+        border-radius: 10px;
+        margin: 0;
+        box-shadow: none; /* Sem sombra */
+    }
+
+    .projects-img p {
+        width: 45%;
+        text-align: justify;
+        font-size: 1.1rem;
+        padding: 0;
+    }
+
+    .btn-project {
+      width: fit-content;
+    }
+
+    #projetos h2{
+      text-align: center;
+    }
+
+    #projetos h3,
+    #projetos a {
+      text-align: start; /* Centraliza títulos */
+    }
+}
