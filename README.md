@@ -6,6 +6,6 @@
 ---
  
 ### Portfólio Online  
-🔗 [Acesse o Portfólio](LINK_PARA_PORTFOLIO)
+🔗 **Acesse o Portfólio:** [Clique aqui](https://cguilhermec.github.io/portfolioFatec/)
 🎤 **Pitch de Apresentação:** [https://youtu.be/ummqIY6puuM](https://youtu.be/ummqIY6puuM)
 
