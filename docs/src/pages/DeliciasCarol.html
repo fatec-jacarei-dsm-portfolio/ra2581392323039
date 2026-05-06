@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Delícias da Carol</title>
+    <title>Ecossistema de Gestão Comercial</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,6 +23,7 @@
 
     <link rel="stylesheet" href="../css/Navbar.css" />
     <link rel="stylesheet" href="../css/GestaoInteligente.css" />
+    <link rel="stylesheet" href="../css/Galeria.css" />
 
     <script src="../scripts/Gestao-Inteligente.js" defer></script>
   </head>
@@ -44,11 +45,12 @@
     </header>
 
     <section class="inicio">
-      <h1>Delícias da Carol</h1>
+      <h1>Ecossistema de Gestão Comercial</h1>
       <p>
-        Esta página apresenta o Delícias da Carol, sistema completo para gestão
-        comercial que desenvolvi, com controle integrado de vendas, estoque e
-        finanças, incluindo visão geral do projeto e tecnologias utilizadas.
+        Uma solução Fullstack de alta performance projetada para centralizar a
+        inteligência de negócios. Do controle preditivo de estoque à gestão
+        financeira em tempo real, entregando eficiência operacional em uma
+        interface mobile intuitiva.
       </p>
     </section>
 
@@ -56,28 +58,28 @@
       <img src="../images/Delicias da Carol/Delicias_Da_Carol.png" alt="" />
       <h2>Overview</h2>
       <p>
-        O Delícias da Carol é um projeto que desenvolvi com o objetivo de
-        facilitar o controle de vendas, estoque e finanças para pequenos e
-        médios negócios. Esta solução fullstack foi criada para oferecer uma
-        experiência completa e eficiente na gestão comercial. Principais
-        funcionalidades que implementei:
+        O ecossistema foi desenvolvido para eliminar silos de informação em
+        pequenos e médios negócios, unindo agilidade na ponta (venda) com
+        robustez na retaguarda (gestão).
       </p>
       <ul>
         <li>
-          <strong>Cadastro de produtos:</strong> Desenvolvi um sistema completo
-          para registro de produtos com controle detalhado de estoque
+          <strong>PDV Mobile Integrado:</strong> Fluxo de transações otimizado
+          para mobile, garantindo agilidade no registro de vendas.
         </li>
         <li>
-          <strong>Registro de vendas:</strong> Criei um fluxo otimizado para
-          registrar transações comerciais com agilidade e precisão
+          <strong>Inteligência de Inventário:</strong> Sistema de controle de
+          estoque com atualização em tempo real e gatilhos de alerta para níveis
+          críticos.
         </li>
         <li>
-          <strong>Controle financeiro:</strong> Implementei um módulo completo
-          para gerenciamento de pagamentos e fluxo de caixa
+          <strong>Gestão de Ativos Financeiros:</strong> Módulo de fluxo de
+          caixa e controle de pagamentos integrado diretamente às vendas.
         </li>
         <li>
-          <strong>Gráficos de acompanhamento:</strong> Desenvolvi visualizações
-          gráficas para monitoramento do desempenho comercial
+          <strong>Data Analytics:</strong> Visualização de métricas de
+          desempenho via gráficos interativos para suporte à decisão
+          estratégica.
         </li>
       </ul>
       <p>Destaques do projeto que construí:</p>
@@ -96,42 +98,33 @@
         </li>
       </ul>
       <p>
-        Projetei o Delícias da Carol para ser uma ferramenta prática, robusta e
-        eficiente, que realmente facilita o dia a dia do usuário.
+        Projetei o Ecossistema de Gestão Comercial para ser uma ferramenta
+        prática, robusta e eficiente, que realmente facilita o dia a dia do
+        usuário.
       </p>
 
       <h2>Arquitetura e Tecnologias Utilizadas</h2>
       <p>
-        Desenvolvi o Delícias da Carol em duas camadas principais: back-end e
-        front-end, com atenção especial à performance e usabilidade.
+        A arquitetura foi desenhada seguindo o padrão MSC
+        (Model-Service-Controller), priorizando a separação de responsabilidades
+        e a manutenibilidade do código.
       </p>
       <ul>
         <li>
-          <strong>Back-end:</strong> Arquitetura MSC que construí utilizando
-          <strong>Node.js</strong> com <strong>TypeScript</strong>. Implementei
-          autenticação com <strong>JWT</strong> e proteção de senhas com
-          <strong>Bcrypt</strong>. Para o banco de dados, utilizei
-          <strong>MySQL</strong> com <strong>Prisma</strong> como ORM - escolha
-          que otimizou significativamente o desenvolvimento.
+          <strong>Core Backend:</strong> Desenvolvido com
+          <strong>Node.js</strong> e <strong>TypeScript</strong>, utilizando
+          <strong>Prisma ORM</strong> sobre <strong>MySQL</strong> para garantir
+          transações seguras e consistentes.
         </li>
         <li>
-          <strong>Front-end Mobile:</strong> Desenvolvi o aplicativo em
-          <strong>React Native</strong> com <strong>Expo</strong> e
-          <strong>TypeScript</strong>, criando uma solução multiplataforma com
-          performance nativa. Implementei gráficos interativos para melhor
-          visualização dos dados.
+          <strong>Segurança:</strong> Implementação de camadas de proteção com
+          <strong>JWT</strong> para autenticação e <strong>Bcrypt</strong> para
+          criptografia de dados sensíveis.
         </li>
         <li>
-          <strong>Sistema de estoque:</strong> Criei um controle em tempo real
-          com atualizações instantâneas e alertas personalizáveis
-        </li>
-        <li>
-          <strong>Módulo financeiro:</strong> Desenvolvi um sistema completo
-          para acompanhamento de recebíveis e fluxo de caixa
-        </li>
-        <li>
-          <strong>Exportação de dados:</strong> Implementei funcionalidade para
-          gerar relatórios em diversos formatos
+          <strong>Interface Mobile:</strong> Desenvolvida em
+          <strong>React Native</strong> com <strong>Expo</strong>, oferecendo
+          uma experiência multiplataforma fluida e responsiva.
         </li>
       </ul>
       <p>
@@ -142,7 +135,7 @@
 
       <div class="galeria-container">
         <div class="carrossel">
-          <button class="seta seta-esquerda">&#10094;</button>
+          <button class="seta-esquerda">&#10094;</button>
 
           <div class="galeria">
             <img
@@ -181,6 +174,11 @@
               class="thumb"
             />
             <img
+              src="../images/Delicias da Carol/Financeiro_Grafico.png"
+              alt="Graficos da página do financeiro"
+              class="thumb"
+            />
+            <img
               src="../images/Delicias da Carol/ModaVenda.png"
               alt="Moda de Venda"
               class="thumb"
@@ -190,9 +188,24 @@
               alt="Página de Venda"
               class="thumb"
             />
+            <img
+              src="../images/Delicias da Carol/PaginaPendencia.png"
+              alt="Verificar Pendências de suas vendas"
+              class="thumb"
+            />
+            <img
+              src="../images/Delicias da Carol/RelatorioPersonalizado.png"
+              alt="Relatório personalisado de cada pendência sua"
+              class="thumb"
+            />
+            <img
+              src="../images/Delicias da Carol/Whats.png"
+              alt="Mensagem personalizada para cobranças no WhatsApp com um botão apenas"
+              class="thumb"
+            />
           </div>
 
-          <button class="seta seta-direita">&#10095;</button>
+          <button class="seta-direita">&#10095;</button>
         </div>
 
         <!-- Lightbox/Modal -->
@@ -202,7 +215,7 @@
           <div class="caption" id="caption"></div>
         </div>
       </div>
-
+      
       <div class="about-box">
         <h2>Tecnologias Utilizadas</h2>
         <ul class="skills-list">

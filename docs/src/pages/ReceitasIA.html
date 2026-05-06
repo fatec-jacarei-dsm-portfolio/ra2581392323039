@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Receita.AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    /* Adicione isso no head do seu HTML para os ícones */
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="../css/Navbar.css" />
+    <link rel="stylesheet" href="../css/GestaoInteligente.css" />
+
+    <script src="../scripts/Gestao-Inteligente.js" defer></script>
+  </head>
+  <body>
+    <header class="navbar" id="navbar">
+      <div class="logo">Guilherme Carvalho</div>
+      <div class="nav-container">
+        <nav class="nav-links">
+          <a href="../../index.html#home">Início</a>
+          <a href="../../index.html#sobre">Sobre Mim</a>
+          <a href="../../index.html#projetos">Projetos</a>
+          <a href="../../index.html#contato">Contato</a>
+        </nav>
+        <!-- Botão menu (vai ser manipulado via JS) -->
+        <button class="menu-button" aria-label="Abrir menu de navegação">
+          ☰
+        </button>
+      </div>
+    </header>
+
+    <section class="inicio">
+      <h1>Receita.AI - Reconhecimento de Alimentos por IA</h1>
+      <p>
+        O Receita.AI é um aplicativo desenvolvido em React Vite como projeto
+        acadêmico do 5º semestre. O objetivo do aplicativo é permitir que o
+        usuário fotografe os alimentos presentes em sua geladeira, e então o
+        sistema utiliza técnicas de reconhecimento de imagem para identificar
+        esses alimentos e sugerir receitas inteligentes com base neles.
+      </p>
+    </section>
+
+    <section class="conteudo">
+      <img src="../images/ReceitaIa/Inicio.png" alt="" />
+      <h2>Overview</h2>
+      <p>
+        O Receita.AI é um projeto que foi desenvolvido com o objetivo de reduzir
+        o desperdício de alimentos e facilitar o dia a dia na cozinha. A
+        plataforma oferece uma experiência completa e personalizada para quem
+        busca aproveitar melhor os ingredientes que já possui em casa.
+        Principais funcionalidades:
+      </p>
+      <ul>
+        <li>
+          <strong>Captura de Foto:</strong> Permite aos usuários fotografar os
+          alimentos disponíveis na geladeira ou despensa.
+        </li>
+        <li>
+          <strong>Identificação de alimentos:</strong> O sistema reconhece
+          automaticamente os itens presentes na imagem utilizando visão
+          computacional.
+        </li>
+        <li>
+          <strong>Lista editável de ingredientes:</strong> Facilita a correção e
+          ajuste dos alimentos detectados antes de gerar a receita.
+        </li>
+        <li>
+          <strong>Geração automática de receitas:</strong> O sistema cria
+          sugestões inteligentes baseadas nos ingredientes disponíveis.
+        </li>
+      </ul>
+      <p>
+        Além dessas funcionalidades, o Receita.AI conta com o apoio de uma
+        <strong>Inteligência Artificial</strong>, que atua como uma assistente
+        pessoal de culinária. Com base nos ingredientes detectados, a IA
+        oferece:
+      </p>
+      <ul>
+        <li>Sugestões de receitas rápidas e práticas;</li>
+        <li>Alertas sobre combinações de ingredientes;</li>
+        <li>
+          Recomendações de <strong>modo de preparo</strong>,
+          <strong>tempo de cozimento</strong>, <strong>porções</strong> e até um
+          <strong>cardápio semanal baseado nos alimentos disponíveis</strong>;
+        </li>
+        <li>
+          Tudo isso de forma <strong>personalizada</strong>, conforme os
+          ingredientes que o usuário possui no momento.
+        </li>
+      </ul>
+      <p>
+        O Receita.AI foi pensado para ser uma solução prática, inteligente e
+        acessível, tornando o preparo de refeições mais simples, reduzindo o
+        desperdício e incentivando uma alimentação consciente.
+      </p>
+      <h2>Arquitetura e Tecnologias Utilizadas</h2>
+      <p>
+        O desenvolvimento do Receita.AI foi estruturado em duas principais
+        camadas: back-end e front-end, com foco na experiência do usuário e na
+        precisão do reconhecimento de alimentos.
+      </p>
+      <ul>
+        <li>
+          <strong>Back-end:</strong> Desenvolvido seguindo o padrão
+          <strong>MVC</strong> utilizando <strong>Node.js</strong> com
+          <strong>TypeScript</strong>. A autenticação é feita com
+          <strong>JWT</strong> e <strong>cookie-parser</strong>, com as senhas
+          protegidas via <strong>bcryptjs</strong>. O banco de dados utilizado é
+          o <strong>MongoDB</strong> com <strong>Mongoose</strong> para
+          modelagem dos dados. Utilizamos também <strong>Multer</strong> para
+          upload de imagens, <strong>CORS</strong> para segurança,
+          <strong>Express</strong> como framework principal e
+          <strong>dotenv</strong> para variáveis de ambiente. A integração com
+          IA foi feita através de uma
+          <strong>API com IA open-source</strong> utilizando
+          <strong>Axios</strong>
+          para as interações e geração de receitas.
+        </li>
+        <li>
+          <strong>Front-end:</strong> Desenvolvido em
+          <strong>React Vite</strong> com <strong>TypeScript</strong>,
+          garantindo performance e organização do código. Utilizamos
+          <strong>React Navigation</strong> para navegação entre telas.
+        </li>
+        <li>
+          <strong>Captura de imagem:</strong> Implementada com biblioteca de
+          câmera, permitindo que o usuário fotografe diretamente os alimentos da
+          geladeira.
+        </li>
+        <li>
+          <strong>Reconhecimento de alimentos:</strong> Utilizamos um modelo de
+          <strong>visão computacional</strong> para identificar automaticamente
+          os itens presentes na imagem.
+        </li>
+        <li>
+          <strong>Armazenamento:</strong> Dados como receitas favoritas e
+          histórico são salvos localmente utilizando
+          <strong>AsyncStorage</strong>.
+        </li>
+      </ul>
+      <p>
+        Com essa arquitetura, o Receita.AI oferece uma experiência simples e
+        eficiente: o usuário tira a foto → confirma os ingredientes → recebe uma
+        receita personalizada com base no que já possui em casa.
+      </p>
+
+      <div class="galeria-container">
+        <div class="carrossel">
+          <button class="seta seta-esquerda">&#10094;</button>
+
+          <div class="galeria">
+            <img
+              src="../images/ReceitaIa/Loading.png"
+              alt="Tela de Loading"
+              class="thumb"
+            />
+            <img
+              src="../images/ReceitaIa/Inicio.png"
+              alt="Tela de Inicio"
+              class="thumb"
+            />
+            <img
+              src="../images/ReceitaIa/Registrar.png"
+              alt="Tela de Registro"
+              class="thumb"
+            />
+            <img
+              src="../images/ReceitaIa/RegistrarSegundaTela.png"
+              alt="Tela de Registro Segunda Parte"
+              class="thumb"
+            />
+            <img
+              src="../images/ReceitaIa/RegistrarTerceiraTela.png"
+              alt="Tela de Registro Terceira Parte"
+              class="thumb"
+            />
+            <img
+              src="../images/ReceitaIa/HomeSemLogin.png"
+              alt="Tela de Home Sem Login"
+              class="thumb"
+            />
+            <img
+              src="../images/ReceitaIa/EscolhendoFoto.png"
+              alt="Tela de Escolha de Foto"
+              class="thumb"
+            />
+            <img
+              src="../images/ReceitaIa/ConfirmarFoto.png"
+              alt="Tela de Confirmar Foto"
+              class="thumb"
+            />
+            <img
+              src="../images/ReceitaIa/ChatComAReceita.png"
+              alt="Tela de Chat com a Receita"
+              class="thumb"
+            />
+            <img
+              src="../images/ReceitaIa/MinhasReceita.png"
+              alt="Tela de Minhas Receitas"
+              class="thumb"
+            />
+          </div>
+
+          <button class="seta seta-direita">&#10095;</button>
+        </div>
+
+        <!-- Lightbox/Modal -->
+        <div class="lightbox" id="lightbox">
+          <span class="close-btn">&times;</span>
+          <img class="lightbox-content" id="lightbox-img" />
+          <div class="caption" id="caption"></div>
+        </div>
+      </div>
+
+      <div class="about-box">
+        <h2>Tecnologias Utilizadas</h2>
+        <ul class="skills-list">
+          <li>React 18</li>
+          <li>TypeScript</li>
+          <li>Vite</li>
+          <li>Radix UI</li>
+          <li>Tailwind CSS</li>
+          <li>Axios</li>
+          <li>React Hook Form</li>
+          <li>Lucide React</li>
+          <li>Recharts</li>
+          <li>Embla Carousel</li>
+          <li>CMDK</li>
+          <li>Sonner</li>
+          <li>Node.js</li>
+          <li>GitHub</li>
+          <li>GIT</li>
+          <li>Figma</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-text">
+          <h1>Guilherme Carvalho</h1>
+          <p>
+            Desenvolvedor Full Stack apaixonado por construir tanto o Frontend
+            quanto o Backend de sites e aplicações web, entregando soluções
+            digitais completas, escaláveis e eficientes que contribuem
+            diretamente para o sucesso do produto.
+          </p>
+        </div>
+        <div class="footer-social">
+          <a
+            href="https://www.instagram.com/_guihcarvalho_"
+            target="_blank"
+            aria-label="Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/guilherme-carvalho-1b8b08156/"
+            target="_blank"
+            aria-label="LinkedIn"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a
+            href="https://github.com/cGuilhermec"
+            aria-label="GitHub"
+            target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <i class="fas fa-copyright"></i> Copyright 2025. Made by Guilherme
+        Carvalho
+      </div>
+    </footer>
+
+    <script src="../scripts/NavBar.js"></script>
+  </body>
+</html>

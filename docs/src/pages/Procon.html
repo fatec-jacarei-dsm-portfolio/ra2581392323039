@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Procon — Chatbot com IA e WhatsApp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/Navbar.css" />
+    <link rel="stylesheet" href="../css/GestaoInteligente.css" />
+    <script src="../scripts/Gestao-Inteligente.js" defer></script>
+  </head>
+  <body>
+    <header class="navbar" id="navbar">
+      <div class="logo">Guilherme Carvalho</div>
+      <div class="nav-container">
+        <nav class="nav-links">
+          <a href="../../index.html#home">Início</a>
+          <a href="../../index.html#sobre">Sobre Mim</a>
+          <a href="../../index.html#projetos">Projetos</a>
+          <a href="../../index.html#contato">Contato</a>
+        </nav>
+        <button class="menu-button" aria-label="Abrir menu de navegação">
+          ☰
+        </button>
+      </div>
+    </header>
+
+    <section class="inicio">
+      <h1>Procon</h1>
+      <p>
+        Esta página apresenta o desenvolvimento completo do chatbot inteligente
+        para o Procon, uma solução inovadora que combina Inteligência Artificial,
+        RAG (Retrieval-Augmented Generation) e integração com WhatsApp para
+        atender a população de forma ágil, precisa e 24 horas por dia.
+      </p>
+    </section>
+
+    <section class="conteudo">
+      <img src="../images/Procon/EmAndamento.png" alt="" />
+
+      <h2>Overview</h2>
+      <p>
+        O <strong>Sistema de Chatbot Inteligente para o Procon</strong> foi
+        desenvolvido com o objetivo de democratizar o acesso à informação e
+        reduzir a sobrecarga no atendimento humano. A solução permite que
+        cidadãos tirem dúvidas sobre seus direitos, prazos, documentação e
+        procedimentos diretamente pelo WhatsApp, utilizando uma IA treinada com
+        a base de conhecimento oficial do órgão.
+      </p>
+      <p>
+        Diferente de chatbots convencionais baseados apenas em palavras-chave,
+        este sistema utiliza a técnica de <strong>RAG (Retrieval-Augmented
+        Generation)</strong> para buscar as perguntas e respostas mais
+        relevantes no banco de dados, gerando respostas contextuais e precisas.
+        Além disso, o sistema é totalmente auditável, registrando cada interação
+        e modificação para garantir transparência e conformidade.
+      </p>
+
+      <h2>Principais Funcionalidades</h2>
+      <ul>
+        <li>
+          <strong>Chatbot via WhatsApp:</strong> Atendimento automático e
+          humanizado diretamente pelo WhatsApp da população;
+        </li>
+        <li>
+          <strong>IA com RAG:</strong> Busca inteligente na base de perguntas
+          oficiais para gerar respostas precisas e contextualizadas;
+        </li>
+        <li>
+          <strong>Gestão completa da base de conhecimento:</strong> Funcionários
+          podem cadastrar, editar e revisar perguntas/respostas com controle de
+          versão;
+        </li>
+        <li>
+          <strong>Sistema de moderação e auditoria:</strong> Coordenadores
+          revisam conteúdos sensíveis, com detecção automática de palavras
+          ofensivas e níveis de gravidade;
+        </li>
+        <li>
+          <strong>Notificações em tempo real:</strong> Alertas para
+          coordenadores sobre perguntas pendentes de revisão ou com alta
+          gravidade;
+        </li>
+        <li>
+          <strong>Logs completos de auditoria:</strong> Todo o histórico de
+          criação, edição e revisão fica registrado para possíveis
+          conferências.
+        </li>
+        <li>
+          <strong>Agendamento via WhatsApp:</strong> População agenda
+          atendimentos diretamente pelo chat, sem precisar ligar ou ir até o
+          balcão;
+        </li>
+        <li>
+          <strong>Painel Administrativo em React:</strong> Interface moderna e
+          responsiva para a equipe do Procon gerenciar todo o sistema.
+        </li>
+      </ul>
+
+      <h2>Arquitetura e Tecnologias Utilizadas</h2>
+      <p>
+        O sistema foi projetado com foco em escalabilidade, segurança e
+        manutenibilidade. A arquitetura é composta por três frentes principais
+        que se comunicam de forma harmoniosa.
+      </p>
+
+      <h3>Front-end (Painel Administrativo)</h3>
+      <ul>
+        <li>
+          <strong>React com Vite:</strong> Interface moderna, rápida e com
+          hot-reload para desenvolvimento ágil.
+        </li>
+        <li>
+          <strong>TypeScript:</strong> Código tipado garantindo maior segurança
+          e manutenibilidade.
+        </li>
+        <li>
+          <strong>Axios:</strong> Comunicação eficiente com a API REST do
+          back-end.
+        </li>
+        <li>
+          <strong>Context API + Hooks:</strong> Gerenciamento de estado global
+          (autenticação, notificações, temas).
+        </li>
+        <li>
+          <strong>CSS Modules:</strong> Estilização escopada e organizada por
+          componente.
+        </li>
+        <li>
+          <strong>Design Responsivo:</strong> Interface adaptada para desktop e
+          tablets, com foco na usabilidade da equipe do Procon.
+        </li>
+      </ul>
+
+      <h3>Back-end Principal (Gestão e API)</h3>
+      <ul>
+        <li>
+          <strong>Node.js + TypeScript:</strong> Garantindo tipagem estática e
+          código mais seguro e escalável.
+        </li>
+        <li>
+          <strong>Prisma ORM + PostgreSQL:</strong> Modelagem robusta do banco
+          de dados com suporte a <em>embeddings</em> vectorizados para busca
+          semântica.
+        </li>
+        <li>
+          <strong>JWT + Bcrypt:</strong> Autenticação segura com diferentes
+          níveis de permissão (Funcionário, Coordenador, Diretor, DEV).
+        </li>
+        <li>
+          <strong>Sistema de moderação com status:</strong> APROVADO,
+          PENDENTE_REVISAO, REPROVADO e BLOQUEADO, garantindo controle total
+          sobre o que entra na base de conhecimento.
+        </li>
+        <li>
+          <strong>AuditLog completo:</strong> Registro de todas as ações
+          (criação, edição, revisão) com dados anteriores e novos, IP e
+          user-agent.
+        </li>
+      </ul>
+
+      <h3>Chatbot com RAG e WhatsApp</h3>
+      <ul>
+        <li>
+          <strong>whatsapp-web.js:</strong> Integração nativa com WhatsApp para
+          envio e recebimento de mensagens, incluindo agendamentos.
+        </li>
+        <li>
+          <strong>RAG (Retrieval-Augmented Generation):</strong> Busca semântica
+          por similaridade de vetores (embeddings) na tabela de Perguntas,
+          encontrando as respostas mais relevantes para a dúvida do usuário.
+        </li>
+        <li>
+          <strong>Fuse.js:</strong> Busca difusa (fuzzy search) como fallback
+          para perguntas com pequenas variações de texto.
+        </li>
+        <li>
+          <strong>Natural (NLP):</strong> Biblioteca de processamento de
+          linguagem natural para melhor compreensão das perguntas dos usuários.
+        </li>
+        <li>
+          <strong>Geração de QR Code automático:</strong> Para autenticação e
+          conexão com a conta do WhatsApp Business.
+        </li>
+      </ul>
+
+      <p>
+        A base de conhecimento é alimentada diretamente pelos funcionários do
+        Procon através do <strong>painel administrativo em React</strong>. Lá,
+        eles podem cadastrar novas perguntas, editar respostas, revisar
+        conteúdo pendente, acompanhar estatísticas de atendimento e gerenciar
+        agendamentos. Quando uma dúvida chega pelo WhatsApp, o chatbot utiliza o
+        RAG para buscar as respostas mais relevantes. Caso a dúvida não seja
+        encontrada, o sistema encaminha para um atendente humano ou registra
+        como uma nova pergunta pendente de revisão. Os agendamentos de
+        atendimento também são feitos diretamente pelo WhatsApp, integrados ao
+        sistema.
+      </p>
+
+      <!-- <div class="galeria-container">
+        <div class="carrossel">
+          <button class="seta seta-esquerda">&#10094;</button>
+
+          <div class="galeria">
+            <img
+              src="../images/Visiona/Login.png"
+              alt="Tela de Login"
+              class="thumb"
+            />
+            <img src="../images/Visiona/home.png" alt="Home" class="thumb" />
+            <img
+              src="../images/Visiona/CadastorUser.png"
+              alt="Tela de cadastro de usuário"
+              class="thumb"
+            />
+            <img
+              src="../images/Visiona/editUser.png"
+              alt="Tela de edição do usuário"
+              class="thumb"
+            />
+            <img
+              src="../images/Visiona/VisaoGeral.png"
+              alt="Tela de visão geral"
+              class="thumb"
+            />
+            <img
+              src="../images/Visiona/Por Analista.png"
+              alt="Tela de visão geral por analista"
+              class="thumb"
+            />
+          </div>
+
+          <button class="seta seta-direita">&#10095;</button>
+        </div>
+
+        <!-- Lightbox/Modal -->
+        <div class="lightbox" id="lightbox">
+          <span class="close-btn">&times;</span>
+          <img class="lightbox-content" id="lightbox-img" />
+          <div class="caption" id="caption"></div>
+        </div>
+      </div> --!>
+
+      <div class="about-box">
+        <h2>Tecnologias Utilizadas</h2>
+        <ul class="skills-list">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>React</li>
+          <li>Vite</li>
+          <li>TypeScript</li>
+          <li>Node.js</li>
+          <li>Express</li>
+          <li>Prisma</li>
+          <li>PostgreSQL</li>
+          <li>WhatsApp-Web.js</li>
+          <li>RAG</li>
+          <li>JWT</li>
+          <li>Bcrypt</li>
+          <li>Axios</li>
+          <li>Context API</li>
+          <li>Fuse.js</li>
+          <li>Natural (NLP)</li>
+          <li>GitHub</li>
+          <li>GIT</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-text">
+          <h1>Guilherme Carvalho</h1>
+          <p>
+            Desenvolvedor Full Stack apaixonado por construir tanto o Frontend
+            quanto o Backend de sites e aplicações web, entregando soluções
+            digitais completas, escaláveis e eficientes que contribuem
+            diretamente para o sucesso do produto.
+          </p>
+        </div>
+        <div class="footer-social">
+          <a
+            href="https://www.instagram.com/_guihcarvalho_"
+            target="_blank"
+            aria-label="Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/guilherme-carvalho-1b8b08156/"
+            target="_blank"
+            aria-label="LinkedIn"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a
+            href="https://github.com/cGuilhermec"
+            aria-label="GitHub"
+            target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <i class="fas fa-copyright"></i> Copyright 2025. Made by Guilherme
+        Carvalho
+      </div>
+    </footer>
+
+    <script src="../scripts/NavBar.js"></script>
+  </body>
+</html>
