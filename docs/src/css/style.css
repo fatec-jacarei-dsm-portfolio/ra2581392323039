@@ -377,3 +377,65 @@ html.no-scroll {
   background: #FAFAFA;
   color: white;
 }
+
+/* Adicione estes estilos ao seu CSS */
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  width: 100%;
+}
+
+.hero-text {
+  flex: 1;
+  text-align: left; /* Alinha o texto à esquerda */
+}
+
+.hero-text p {
+  text-align: left; /* Ajustado para acompanhar o container */
+}
+
+.hero-image {
+  flex: 0 0 40%; /* A foto ocupa 40% da largura */
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  margin-top: 15px;
+  border-radius: 50%; /* Faz a foto ficar redonda */
+  border: 5px solid #7843E9; /* Borda roxa combinando com o botão */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.05); /* Efeito suave ao passar o mouse */
+}
+
+/* Responsividade: Empilha em telas menores */
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column-reverse; /* Foto vai para cima em mobile */
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  .hero-text {
+    text-align: center;
+  }
+  
+  .hero-text p {
+    text-align: center;
+  }
+
+  .hero-image img {
+    width: 200px;
+    height: 200px;
+  }
+}
